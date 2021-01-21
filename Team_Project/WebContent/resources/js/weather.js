@@ -5,14 +5,16 @@ const COORDS = "coords";
 
 function getWeather(lat, lng) {
 		fetch(
-			`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+			`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
 		).then(function(response) {
 			return response.json();
 		}).then(function(json){
 			console.log(json);
-			const temperature = json.list[10].main.temp;
-			const place = json.city.name;
-			weather.innerText = `${temperature} @ ${place}`;
+			const temperature = json.main.temp;
+			const place = json.name;
+			const weathers = json.weather[0];
+			weatherIcon_src = `https://openweathermap.org/img/wn/${weathers.icon}@2x.png`;
+			weather.innerText = `${temperature} @ ${place} @ ${weathers.main} @ ${weatherIcon_src}`;
 		});
 }
 

@@ -16,10 +16,13 @@
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-4 text-center">장소를 정해봅시다!</h1><br/><br/>
-			<div>
-				<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요...">
-				<br/>
-				<input type="button" value="검색">
+			<div class="row justify-content-md-center" align="center">
+				<div class="col-md-7">
+					<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요...">
+				</div>
+				<div class="">
+					<input type="button" class="btn btn-primary" value="검색">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -50,9 +53,34 @@
 				
 			%>
 			<br/>
-			현위치 날씨 :
-			<span class="js-weather"></span>
 		</div>
+		
+		<div class="row" align="center">
+			<div class="col-md-4" align="center">
+				현재온도 <span class="js-weather">
+					<img class="weather-img" alt="" src="${weatherIcon_src}">
+				</span>
+				<img alt="#" src="" class="">
+			</div>
+			<!-- <div class="col-md-4" align="center">
+				서울<span class="js-weather"></span>
+			</div>
+			<div class="col-md-4" align="center">
+				부산<span class="js-weather"></span>
+			</div> -->
+		</div>
+		<div class="row" align="center">
+			<!-- <div class="col-md-4" align="center">
+				대전<span class="js-weather"></span>
+			</div>
+			<div class="col-md-4" align="center">
+				대구<span class="js-weather"></span>
+			</div>
+			<div class="col-md-4" align="center">
+				울산<span class="js-weather"></span>
+			</div> -->
+		</div>
+		
 		<hr/>
 	</div>
 	
