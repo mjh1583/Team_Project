@@ -1,5 +1,3 @@
-const weather = document.querySelector(".js-weather");
-
 const API_KEY = "2f56e0eca22d5ff3b63420e13297030b";
 const COORDS = "coords";
 
@@ -10,11 +8,33 @@ function getWeather(lat, lng) {
 			return response.json();
 		}).then(function(json){
 			console.log(json);
-			const temperature = json.main.temp;
+			/*const temperature = json.main.temp;
 			const place = json.name;
 			const weathers = json.weather[0];
-			weatherIcon_src = `https://openweathermap.org/img/wn/${weathers.icon}@2x.png`;
-			weather.innerText = `${temperature} @ ${place} @ ${weathers.main} @ ${weatherIcon_src}`;
+			const weatherIcon_src = `https://openweathermap.org/img/wn/${weathers.icon}@2x.png`;
+			var img = document.getElementById('current-weather-icon');
+			img.attr("src", weatherIcon_src);
+			jQuery('#current-weather-icon').attr("src", weatherIcon_src);
+			weather.innerText = `${temperature} @ ${place} @ ${weathers.main} @ ${weatherIcon_src}`;*/
+			
+			const location = document.querySelector('.location');
+			const currentTemp = document.querySelector('.current-temp');
+			const feelsLike = document.querySelector('.feels-like');
+			const minTemp = document.querySelector('.min-temp');
+			const maxTemp = document.querySelector('.max-temp');
+			const icon = document.querySelector('.icon');
+			const weatherStatus = document.querySelector('.weather-status');
+			
+			const weathers = json.weather[0];
+			
+			location.append(`${json.name}`);
+			currentTemp.append(`${json.main.temp}`);
+			feelsLike.append(`${json.main.feels_like}`);
+			minTemp.append(`${json.main.temp_min}`);
+			maxTemp.append(`${json.main.temp_max}`);
+			icon.innerHTML = `<img src='https://openweathermap.org/img/wn/${weathers.icon}@2x.png'>`;
+			weatherStatus.append(`${weathers.main}`);
+			
 		});
 }
 
@@ -33,7 +53,7 @@ function handleGeoSuccess(position) {
 	getWeather(latitude, longitude);
 }
 
-function handleGeoError(position) {
+function handleGeoError() {
 	console.log("Can't access geo location");
 }
 

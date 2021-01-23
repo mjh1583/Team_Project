@@ -5,12 +5,25 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	
+	<!-- 캐시 삭제 -->
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+
 	<title>놀러가자</title>
 	
 	<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 	
 </head>
 <body>
+	<!-- 페이지를 열때마다 자동으로 캐시 삭제 -->
+	<%
+		response.setHeader("Cache-Control","no-cache");
+		response.setHeader("Pragma","no-cache");
+		response.setDateHeader("Expires",0);
+	%>
+
 	<jsp:include page="menu.jsp"/>	
 	
 	<div class="jumbotron">
@@ -55,21 +68,49 @@
 			<br/>
 		</div>
 		
-		<div class="row" align="center">
-			<div class="col-md-4" align="center">
-				현재온도 <span class="js-weather">
-					<img class="weather-img" alt="" src="${weatherIcon_src}">
-				</span>
-				<img alt="#" src="" class="">
+		<div class="container">
+			<div class="row" align="center">
+				<div class="col-md-4" align="center">
+					<div class="weather-data">
+						<h1 class="location"></h1>
+					</div>
+					<div class="weather-temp">
+						<div class="current-temp">현재 온도 : </div>
+						<div class="icon"></div>
+						<div class="feels-like">체감 온도 : </div>
+						<div class="max-temp">최고 온도 : </div>
+						<div class="min-temp">최저 온도 : </div>
+						<div class="weather-status">날씨 : </div>
+					</div>
+				</div>
+				
+				<%
+					String[] city = {"seoul", "daegu", "daejeon", "busan", "incheon", "ulsan", "gwangju", "jeju"};
+					
+					for(int i = 0; i < city.length; i++) {
+						
+					}
+				%>
+				
+				<div class="col-md-4" align="center">
+					<div class="weather-data">
+						<h1>서울</h1>
+					</div>
+					<div class="weather-temp">
+						<div class="s_current-temp">현재 온도 : </div>
+						<div class="s_icon"></div>
+						<div class="s_feels-like">체감 온도 : </div>
+						<div class="s_max-temp">최고 온도 : </div>
+						<div class="s_min-temp">최저 온도 : </div>
+						<div class="s_weather-status">날씨 : </div>
+					</div>
+				</div>
+				<div class="col-md-4" align="center">
+					부산
+				</div>
 			</div>
-			<!-- <div class="col-md-4" align="center">
-				서울<span class="js-weather"></span>
-			</div>
-			<div class="col-md-4" align="center">
-				부산<span class="js-weather"></span>
-			</div> -->
-		</div>
-		<div class="row" align="center">
+			
+			<div class="row" align="center">
 			<!-- <div class="col-md-4" align="center">
 				대전<span class="js-weather"></span>
 			</div>
@@ -79,8 +120,8 @@
 			<div class="col-md-4" align="center">
 				울산<span class="js-weather"></span>
 			</div> -->
+			</div>
 		</div>
-		
 		<hr/>
 	</div>
 	
@@ -88,5 +129,6 @@
 	
 	<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="resources/js/weather.js"></script>
+	<script type="text/javascript" src="resources/js/weather_seoul.js"></script>
 </body>
 </html>
