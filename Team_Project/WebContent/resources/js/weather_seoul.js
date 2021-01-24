@@ -2,8 +2,10 @@
 //const COORDS = "coords";
 
 function getWeather() {
+	var city = jQuery("#city").attr("class");
+	
 	fetch(
-		`https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=${API_KEY}&units=metric`
+	`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
 	).then(function(response) {
 		return response.json();
 	}).then(function(json){
@@ -35,6 +37,8 @@ function getWeather() {
 		
 	});
 }
+	
+
 
 function saveCoords(coordsObj) {
 	localStorage.setItem(COORDS,JSON.stringify(coordsObj));

@@ -68,11 +68,15 @@
 			<br/>
 		</div>
 		
+		<!-- 반복문으로 각 지역의 날씨 정보를 페이지에 구현하고 싶은데 어떻게 해야할지 모르겠음 -->
+		<!-- 모든 도시 정보들을 다 가져오긴 하나 현위치를 제외하고는 전부 제주에 출력됨 -->
+		<!-- 이유는 모르겠음 -->
 		<div class="container">
+			<h1 class="display-4 text-center">주요 지역의 날씨</h1>
 			<div class="row" align="center">
 				<div class="col-md-4" align="center">
 					<div class="weather-data">
-						<h1 class="location"></h1>
+						<h1 class="location" id="city"></h1>
 					</div>
 					<div class="weather-temp">
 						<div class="current-temp">현재 온도 : </div>
@@ -83,52 +87,36 @@
 						<div class="weather-status">날씨 : </div>
 					</div>
 				</div>
-				
 				<%
-					String[] city = {"seoul", "daegu", "daejeon", "busan", "incheon", "ulsan", "gwangju", "jeju"};
+					String[] cities = {"seoul", "daegu", "daejeon", "busan", "incheon", "ulsan", "gwangju", "jeju"};
 					
-					for(int i = 0; i < city.length; i++) {
-						
+					for(int i = 0; i < cities.length; i++) {
+						String city = cities[i];
+				%>
+					<div class="col-md-4" align="center">
+						<div class="weather-data">
+							<h1 class="<%= city %>" id="city"><%= city %></h1>
+						</div>
+						<div class="weather-temp">
+							<div class="<%= city %>_current-temp">현재 온도 : </div>
+							<div class="<%= city %>_icon"></div>
+							<div class="<%= city %>_feels-like">체감 온도 : </div>
+							<div class="<%= city %>_max-temp">최고 온도 : </div>
+							<div class="<%= city %>_min-temp">최저 온도 : </div>
+							<div class="<%= city %>_weather-status">날씨 : </div>
+						</div>				
+					</div>
+				<%
 					}
 				%>
-				
-				<div class="col-md-4" align="center">
-					<div class="weather-data">
-						<h1>서울</h1>
-					</div>
-					<div class="weather-temp">
-						<div class="s_current-temp">현재 온도 : </div>
-						<div class="s_icon"></div>
-						<div class="s_feels-like">체감 온도 : </div>
-						<div class="s_max-temp">최고 온도 : </div>
-						<div class="s_min-temp">최저 온도 : </div>
-						<div class="s_weather-status">날씨 : </div>
-					</div>
-				</div>
-				<div class="col-md-4" align="center">
-					부산
-				</div>
 			</div>
-			
-			<div class="row" align="center">
-			<!-- <div class="col-md-4" align="center">
-				대전<span class="js-weather"></span>
-			</div>
-			<div class="col-md-4" align="center">
-				대구<span class="js-weather"></span>
-			</div>
-			<div class="col-md-4" align="center">
-				울산<span class="js-weather"></span>
-			</div> -->
-			</div>
+			<hr/>
 		</div>
-		<hr/>
 	</div>
-	
 	<jsp:include page="footer.jsp"/>
 	
 	<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="resources/js/weather.js"></script>
-	<script type="text/javascript" src="resources/js/weather_seoul.js"></script>
+	
 </body>
 </html>
