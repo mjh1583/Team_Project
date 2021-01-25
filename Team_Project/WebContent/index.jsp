@@ -43,7 +43,7 @@
 	<div class="container">
 		<div class="text-center">
 			<%
-				//웹사이트의 리프레쉬 기능 추가
+				//웹사이트의 리프레쉬 기능 추가...
 				//response.setIntHeader("Refresh", 5);
 				
 				Calendar calendar = Calendar.getInstance();
