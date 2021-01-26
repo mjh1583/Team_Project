@@ -17,7 +17,7 @@
 	
 </head>
 <body>
-	<!-- 페이지를 열때마다 자동으로 캐시 삭제 -->
+	<!-- 페이지를 열때마다 자동으로 캐시 삭제   -->
 	<%
 		response.setHeader("Cache-Control","no-cache");
 		response.setHeader("Pragma","no-cache");
