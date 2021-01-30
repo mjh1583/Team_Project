@@ -6,7 +6,7 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">  <!-- 네비게이션 바를 만듦 -->
 	<div class="container">  <!-- container라는 클래스부터 내용을 표시함 -->
 		<a class="navbar-brand justify-content-start" href="./index.jsp">
-           		<img src="img/logo.png" alt="Site logo">놀러가자
+           		<img src="resources/img/logo.png" alt="Site logo">놀러가자
         </a>
 		<div class="navbar-header">  <!-- 네비게이션 헤더 -->
             <ul class="navbar-nav ml-auto justify-content-end">
