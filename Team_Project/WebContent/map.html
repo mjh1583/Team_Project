@@ -20,7 +20,7 @@
 		#menu_wrap .option button {margin-left:5px;} */
 	 	 
 	 	/* radius_border */	
-		.radius_border {border:1px solid #919191; border-radius:5px;}
+		.radius_border {border:1px /* solid #919191 */; border-radius:5px;}
 		
 		/* custom_typecontrol */
 		.custom_typecontrol {position:absolute; top:10px; right:50px; overflow:hidden; width:130px; height:30px; margin:0; z-index:1; font-size:12px;}
@@ -98,8 +98,8 @@
 			<div class="custom_zoomcontrol radius_border"> 
 		        <span onclick="zoomIn()"><img src="./resources/img/ico_plus.png" alt="확대"></span>
 		        <span onclick="zoomOut()"><img src="./resources/img/ico_minus.png" alt="축소"></span>
-		    </div>			
-			<!-- <div id="menu_wrap" class="bg_white">
+		   <!--  </div>			
+			<div id="menu_wrap" class="bg_white">
 				<div class="option">
             		<div>
             		 	<form onsubmit="searchPlaces(); return false;">
@@ -107,29 +107,29 @@
 					     	<button type="submit">검색하기</button> 
 				      	</form>
          		   	</div>
-			 	 </div> -->
+			 	 </div>
 		 	<div>
     		<hr>
-    		<!-- <ul id="placesList"></ul>
+    		<ul id="placesList"></ul>
     		<div id="pagination"></div> -->
 			</div>
 		<!-- </div> -->
 	</div>
 					
-	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=87491b2148c110a513e3c850944bb83c&libraries=services,clusterer,drawing"></script> -->
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=87491b2148c110a513e3c850944bb83c&libraries=services"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=87491b2148c110a513e3c850944bb83c&libraries=services,clusterer,drawing"></script>
+	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=87491b2148c110a513e3c850944bb83c&libraries=services"></script> -->
 	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appKey=87491b2148c110a513e3c850944bb83c"></script> -->
 	<script type="text/javascript">
 		
-		var mapContainer= document.getElementById('map'),				// 지도표시 div
+		var mapContainer= document.getElementById('map'),	// 지도표시 div
 		mapOption= {
 			center : new kakao.maps.LatLng(37.566826, 126.9786567),
-			level : 3												// 지도 확대 레벨
+			level : 3
 		};
-		// 지도 표시 div와 지도 옵션으로 지도 생성
+		
 		var map= new kakao.maps.Map(mapContainer, mapOption);
 					
-		// 지도타입 컨트롤 : 버튼 클릭시 해당 지도타입호출
+		// 지도타입 컨트롤
 		function setMapType(maptype) {
 			var roadmapControl= document.getElementById('btnRoadmap');
 			var skyviewControl= document.getElementById('btnSkyview');
@@ -144,11 +144,11 @@
 				roadmapControl.className= 'btn';
 			}
 		}
-		// 지도 확대 버튼
+		
+		// 지도 확대, 축소
 		function zoomIn() {
 			map.setLevel(map.getLevel() -1);
 		}
-		// 지도 축소 버튼
 		function zoomOut() {
 			map.setLevel(map.getLevel() +1); 
 		}
