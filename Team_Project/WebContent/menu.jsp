@@ -22,7 +22,7 @@
 	            	<a class="nav-link active" href="index.jsp">Home <span class="sr-only">(current)</span></a>
 	            </li>
 	            <li class="nav-item">
-	            	<a class="nav-link active" href="#">지역</a>
+	            	<a class="nav-link active" href="map.jsp">지역</a>
 	            </li>
 	            <li class="nav-item">
 	            	<a class="nav-link active" href="#">여행 가이드</a>

@@ -76,7 +76,8 @@
 		#pagination .on {font-weight: bold; cursor: default;color:#777;}
 		
 	</style>
-
+	
+	<script type="text/javascript" src="./resources/js/map.js"></script>
 </head>
 <body>
 	<div class="map_wrap">
@@ -98,8 +99,8 @@
 			<div class="custom_zoomcontrol radius_border"> 
 		        <span onclick="zoomIn()"><img src="./resources/img/ico_plus.png" alt="확대"></span>
 		        <span onclick="zoomOut()"><img src="./resources/img/ico_minus.png" alt="축소"></span>
-		   <!--  </div>			
-			<div id="menu_wrap" class="bg_white">
+		    </div>			
+			<!-- <div id="menu_wrap" class="bg_white">
 				<div class="option">
             		<div>
             		 	<form onsubmit="searchPlaces(); return false;">
@@ -111,14 +112,15 @@
 		 	<div>
     		<hr>
     		<ul id="placesList"></ul>
-    		<div id="pagination"></div> -->
+    		<div id="pagination"></div>
 			</div>
-		<!-- </div> -->
+		</div> -->
 	</div>
 					
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=87491b2148c110a513e3c850944bb83c&libraries=services,clusterer,drawing"></script>
+	<script type="text/javascript"  src="//dapi.kakao.com/v2/maps/sdk.js?appkey=87491b2148c110a513e3c850944bb83c&libraries=services,clusterer,drawing"></script>
 	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=87491b2148c110a513e3c850944bb83c&libraries=services"></script> -->
 	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appKey=87491b2148c110a513e3c850944bb83c"></script> -->
+	<!-- <script typr="text/javascript" src="./resources/js/map.js"></script> -->
 	<script type="text/javascript">
 		
 		var mapContainer= document.getElementById('map'),	// 지도표시 div
@@ -158,8 +160,8 @@
 					
 		function setOverlayMapTypeId(maptype) {
 			var changeMaptype;
-			var trafficControl= document.getElementById('btnTraffic');
-			var roadviewControl= document.getElementById('btnRoadview');
+			/* var trafficControl= document.getElementById('btnTraffic');
+			var roadviewControl= document.getElementById('btnRoadview'); */
 							
 			if(maptype === 'traffic') {
 				changeMaptype= kakao.maps.MapTypeId.TRAFFIC;
