@@ -19,78 +19,7 @@
 	</script>
 	
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	
-	<style type="text/css">
-	
-		/* 레이아웃 틀 */
-		
-		html{
-			height: 100%;		
-		}
-		
-		body{
-			margin: 0;
-			height: 100%;
-			background: #f5f6f7;
-		}
-		
-		#wrapper{
-			position: relative;
-			height: 100%
-		}
-		
-		#content{
-			position: absolute;
-			left: 50%;
-			transform: translate(-50%);
-			width: 460px;
-		}
-		
-		/* 입력폼 */
-		
-		h3{
-			margin: 19px 0px 8px;
-			font-size: 14px;
-			font-weight: 700;
-		}
-		
-		.box{
-			display: block;
-			width: 100%;
-			height: 51px;
-			border: solid 1px #dadada;
-			padding: 10px 14px 10px 14px;
-			box-sizing: border-box;
-			background: #fff;
-			position: relative;
-		}
-		
-		.int{
-			display: block;
-			position: relative;
-			width: 100%;
-			height: 29px;
-			border: none;
-			background: #fff;
-			font-size: 15px;	
-		}
-		
-		/* 버튼 */
-		
-		.btn_Area{
-			text-align: center;
-		}
-		
-		#btn{
-			width: 30%;
-			padding: 11px 0px 7px;
-			border: 0px;
-			cursor: pointer;
-			font-size: 20px;
-			font-weight: 400;
-		}
-	
-	</style>
+	<link rel="stylesheet" href="./css/login.css">
 	
 </head>
 <body>
