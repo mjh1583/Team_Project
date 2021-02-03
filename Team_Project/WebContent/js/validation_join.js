@@ -127,6 +127,26 @@ function checkValue(){
 		return;
 	}
 	
+	/* 날짜에 1일 미만 31일 초과 값을 입력할 경우 */
+	if(dd.value < 1 || dd.value > 31){
+		alert("태어난 일(날짜)은 1일 ~ 31일 사이에서 입력해주세요.");
+		
+		dd.select();
+		dd.focus();
+		return;
+	}	
+	
+	/* 2월에 30일 이상 입력할 경우 */
+	if(mm.value == "02" && dd.value >= 30){
+		alert("2월은 1일 ~ 28,29일 사이에서 입력해주세요.");
+		
+		dd.select();
+		dd.focus();
+		return;
+	
+	}
+	
+	
 	/* 이메일 입력여부 확인 */
 	if(email.value == ""){
 		alert("이메일 확인해주세요.");
