@@ -32,7 +32,7 @@ function checkValue(){
 	
 	/* 5~20자의 영문 소문자, 숫자와 특수기호(_),(-) 외 입력할 경우 */
 	if(!idPattern.test(id.value)){
-		alert("5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.");
+		alert("아이디는 5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.");
 		
 		id.select();
 		id.focus();
@@ -50,7 +50,7 @@ function checkValue(){
 	
 	/* 4~12자 영문 대 소문자, 숫자, 특수문자 외 입력할 경우 */
 	if(!pwPattern.test(pw.value)){
-		alert("4~12자 영문 대 소문자, 숫자, 특수문자만 사용 가능합니다.");
+		alert("비밀번호는 4~12자 영문 대 소문자, 숫자, 특수문자만 사용 가능합니다.");
 		
 		pw.select();
 		pw.focus();
@@ -77,7 +77,7 @@ function checkValue(){
 	
 	/* 한글과 영문 대 소문자 외 입력할 경우 + 특수기호, 공백 사용할 경우 */
 	if(!namePattern.test(name.value)){
-		alert("한글과 영문 대 소문자만 사용 가능합니다. (특수기호, 공백 사용 불가)");
+		alert("이름은 한글과 영문 대 소문자만 사용 가능합니다. (특수기호, 공백 사용 불가)");
 		
 		name.select();
 		name.focus();
@@ -120,7 +120,7 @@ function checkValue(){
 
 	/* 날짜에 숫자1개~2개 외의 다른 데이터(문자 등)를 입력할 경우 */
 	if(!datePattern.test(dd.value)){
-		alert("태어난 일(날짜)을 정확하게 입력하세요.");
+		alert("태어난 날짜를 정확하게 입력하세요.");
 		
 		dd.select();
 		dd.focus();
@@ -129,7 +129,7 @@ function checkValue(){
 	
 	/* 날짜에 1일 미만 31일 초과 값을 입력할 경우 */
 	if(dd.value < 1 || dd.value > 31){
-		alert("태어난 일(날짜)은 1일 ~ 31일 사이에서 입력해주세요.");
+		alert("태어난 날짜는 1일 ~ 31일 사이에서 입력해주세요.");
 		
 		dd.select();
 		dd.focus();

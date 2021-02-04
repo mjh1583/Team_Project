@@ -19,7 +19,7 @@
 	<jsp:include page="menu.jsp"/>	
 	
 	<div class="jumbotron">
-		<div class="container">
+		<div class="container">                          <!-- 이름 출력 -->
 			<h1 class="display-3"><font color="blue"></font>님 가입을 축하드립니다!</h1>
 			<br/>
 			<h5>회원가입 정보를 확인하세요.</h5>
@@ -38,7 +38,7 @@
 					<label for="id">아이디</label>
 				</h3>
 				<span class="box">
-					<p class="int"></p>
+					<p class="int"></p>  <!-- 아이디 출력 -->
 				</span>
 			</div><!-- 아이디 -->
 			
@@ -48,7 +48,7 @@
 					<label for="pw">비밀번호</label>
 				</h3>
 				<span class="box">
-					<p class="int"></p>
+					<p class="int"></p>  <!-- 비밀번호 출력 -->
 				</span>
 			</div><!-- 비밀번호 -->
 			
@@ -58,7 +58,7 @@
 					<label for="name">이름</label>
 				</h3>
 				<span class="box">
-					<p class="int"></p>
+					<p class="int"></p>  <!-- 이름 출력 -->
 				</span>
 			</div><!-- 이름 -->
 			
@@ -67,8 +67,8 @@
 				<h3 class="joinPro_title">
 					<label for="birth">생년월일</label>
 				</h3>
-				<span class="box">
-					<p class="int">년 &nbsp; 월 &nbsp; 
+				<span class="box">  <!-- 생년월일 출력 -->
+					<p class="int">년 &nbsp; 월 &nbsp;   
 					일</p>
 				</span>
 			</div><!-- 생년월일 -->
@@ -79,7 +79,7 @@
 					<label for="email">이메일</label>
 				</h3>
 				<span class="box">
-					<p class="int"></p>
+					<p class="int"></p>   <!-- 이메일 출력 -->
 				</span>
 			</div><!-- 이메일 -->
 			
@@ -89,7 +89,7 @@
 					<label for="addr">주소</label>
 				</h3>
 				<span class="box">
-					<p class="int"></p>
+					<p class="int"></p>   <!-- 주소 출력 -->
 				</span>
 			</div><!-- 주소 -->
 			

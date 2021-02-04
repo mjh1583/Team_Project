@@ -19,7 +19,7 @@
 	<jsp:include page="menu.jsp"/>	
 	
 	<div class="jumbotron">
-		<div class="container">
+		<div class="container">                        <!-- 아이디 출력 -->
 			<h1 class="display-3"><font color="blue"></font>님 환영합니다!</h1>
 		</div>
 	</div>
@@ -32,7 +32,7 @@
 			<br/>
 			<!-- 아이디 -->
 			<div>
-				<h2 class="display-6"><font color="blue"></font>님이 로그인 하셨습니다.</h2>
+				<h2 class="display-6"><font color="blue">[]</font>님이 로그인 하셨습니다.</h2>   <!-- 아이디 -->
 			</div><!-- 아이디 -->
 			<br/>
 			<br/>
