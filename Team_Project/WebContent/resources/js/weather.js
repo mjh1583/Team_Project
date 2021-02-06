@@ -2,9 +2,9 @@ const API_KEY = "2f56e0eca22d5ff3b63420e13297030b";
 const COORDS = "coords";
 
 function getWeather(lat, lng) {
-	var cities = new Array("location","seoul", "daegu", "daejeon", "busan", "incheon", "ulsan", "gwangju", "jeju");
+	var cities = new Array("location", "seoul", "daegu", "daejeon", "busan", "incheon", "ulsan", "gwangju", "jeju");
 	
-	for(var i = 0; i < cities.length; i++){
+	for(var i = 0; i < cities.length; i++) {
 		var city = cities[i];
 		console.log(city);
 		
@@ -24,13 +24,20 @@ function getWeather(lat, lng) {
 				var weatherStatus = document.querySelector('.weather-status');
 				var weathers = json.weather[0];
 				
-				location.append(`${json.name}`);
-				currentTemp.append(`${json.main.temp}`);
+				//location.append(`${json.name}`);
+				/*currentTemp.append(`${json.main.temp}`);
 				feelsLike.append(`${json.main.feels_like}`);
 				minTemp.append(`${json.main.temp_min}`);
 				maxTemp.append(`${json.main.temp_max}`);
 				icon.innerHTML = `<img src='https://openweathermap.org/img/wn/${weathers.icon}@2x.png'>`;
-				weatherStatus.append(`${weathers.main}`);
+				weatherStatus.append(`${weathers.main}`);*/
+				location.append(json.name);
+				currentTemp.append(json.main.temp);
+				feelsLike.append(json.main.feels_like);
+				minTemp.append(json.main.temp_min);
+				maxTemp.append(json.main.temp_max);
+				icon.innerHTML = `<img src='https://openweathermap.org/img/wn/${weathers.icon}@2x.png'>`;
+				weatherStatus.append(weathers.main);
 			});
 		}
 		else if(city != "location"){
@@ -48,12 +55,18 @@ function getWeather(lat, lng) {
 				var weatherStatus = document.querySelector('.' + city + '_weather-status');
 				var weathers = json.weather[0];
 				
-				currentTemp.append(`${json.main.temp}`);
+				/*currentTemp.append(`${json.main.temp}`);
 				feelsLike.append(`${json.main.feels_like}`);
 				minTemp.append(`${json.main.temp_min}`);
 				maxTemp.append(`${json.main.temp_max}`);
 				icon.innerHTML = `<img src='https://openweathermap.org/img/wn/${weathers.icon}@2x.png'>`;
-				weatherStatus.append(`${weathers.main}`);
+				weatherStatus.append(`${weathers.main}`);*/
+				currentTemp.append(json.main.temp);
+				feelsLike.append(json.main.feels_like);
+				minTemp.append(json.main.temp_min);
+				maxTemp.append(json.main.temp_max);
+				icon.innerHTML = `<img src='https://openweathermap.org/img/wn/${weathers.icon}@2x.png'>`;
+				weatherStatus.append(weathers.main);
 			});
 		}
 	}	
@@ -79,7 +92,11 @@ function handleGeoError() {
 }
 
 function askForCoords(){ 
-	navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
+	navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError, {
+		enableHighAccuracy : true,
+		maximumAge : 0,
+		timeout : 10000
+	});
 }
 
 function loadCoords() {
@@ -94,6 +111,7 @@ function loadCoords() {
 }
 
 function init() {
+	localStorage.clear();
 	loadCoords();
 }
 

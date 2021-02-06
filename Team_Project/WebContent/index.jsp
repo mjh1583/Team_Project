@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -15,6 +16,29 @@
 	
 	<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 	
+	<style type="text/css">
+		#calendar {
+			text-align: center;
+		}
+		
+		.container > img {
+			width: 100%;
+			top: 50%;
+			left: 50%;
+			object-fit: cover;
+		}
+		
+		.tm-banner-bg {
+		    background: url(resources/img/banner.jpg) center top no-repeat;    
+		    min-height: 360px;
+		    position: relative;
+		}
+		
+		.header {
+			font-weight: bold;
+			color: #1207D5;
+		}
+	</style>
 </head>
 <body>
 	<!-- 페이지를 열때마다 자동으로 캐시 삭제 -->
@@ -23,12 +47,16 @@
 		response.setHeader("Pragma","no-cache");
 		response.setDateHeader("Expires",0);
 	%>
-
+	
+	<!-- 메뉴 부분 : 내비게이션 바 -->
 	<jsp:include page="menu.jsp"/>	
 	
+	<!-- 화면 상단의 점보트론 -->
+	<!-- 검색을 하면 지역정보로 넘어감 -->
 	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-4 text-center">장소를 정해봅시다!</h1><br/><br/>
+		<div class="container tm-banner-bg">
+			<br/><br/><br/><br/><br/><br/><br/><br/>
+			<h1 class="display-4 text-center header">장소를 정해봅시다!</h1><br/>
 			<div class="row justify-content-md-center" align="center">
 				<div class="col-md-7">
 					<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요...">
@@ -40,10 +68,12 @@
 		</div>
 	</div>
 	
+	<!-- 메인페이지의 주요 내용 -->
+	<!-- 1. 날씨  2. 달력 -->
 	<div class="container">
 		<div class="text-center">
 			<%
-				//웹사이트의 리프레쉬 기능 추가
+				//웹사이트의 리프레쉬 기능 추가...
 				//response.setIntHeader("Refresh", 5);
 				
 				Calendar calendar = Calendar.getInstance();
@@ -51,6 +81,9 @@
 				int minute = calendar.get(Calendar.MINUTE);
 				int second = calendar.get(Calendar.SECOND);
 				int am_pm = calendar.get(Calendar.AM_PM);
+				
+				int thisYear = calendar.get(Calendar.YEAR);
+				int thisMonth = calendar.get(Calendar.MONTH) + 1;
 				
 				String ampm = null;
 				if(am_pm == 0) {
@@ -61,16 +94,15 @@
 				}
 				
 				String connectionTime = ampm + ":" + hour + ":" + minute + ":" + second;
-				
+					
 				out.println("현재 접속 시간 : " + connectionTime + "\n");
 				
 			%>
 			<br/>
 		</div>
 		
-		<!-- 반복문으로 각 지역의 날씨 정보를 페이지에 구현하고 싶은데 어떻게 해야할지 모르겠음 -->
 		<!-- 모든 도시 정보들을 다 가져오긴 하나 현위치를 제외하고는 전부 제주에 출력됨 -->
-		<!-- 이유는 모르겠음 -->
+		<!-- 슬라이더로 한줄로 표시되게 바꾸는게 더 이쁠거같음 -->
 		<div class="container">
 			<h1 class="display-4 text-center">주요 지역의 날씨</h1>
 			<div class="row" align="center">
@@ -110,13 +142,63 @@
 					}
 				%>
 			</div>
-			<hr/>
+			<br/><br/>
+		</div>  <!-- 날씨 -->
+		
+		<!-- 달력 부분 -->
+		<!-- 우리나라 축제나 행사정보를 가져와서 달력에 표시하면 좋을 듯 -->
+		<div class="container">
+			<h1 class="display-4 text-center">이달의 행사/축제</h1><br/><br/>
+			<table class="table col-md-10" id="calendar">
+		        <tr>
+		            <td><font size=5%; color="#B3B6B3"><label onclick="beforem()" id="before" ></label></font></td>
+		            <td class="display-4" colspan="5" align="center" id="yearmonth"></td>
+		            <td><font size=5%; color="#B3B6B3"><label onclick="nextm()" id="next"></label></font></td>
+		        </tr>
+		        <tr>
+		            <td align="center"> <font color="#FF9090">일</font></td>
+		            <td align="center"> 월 </td>
+		            <td align="center"> 화 </td>
+		            <td align="center"> 수 </td>
+		            <td align="center"> 목 </td>
+		            <td align="center"> 금 </td>
+		            <td align="center"><font color=#7ED5E4>토</font></td>
+		        </tr>
+    		</table>
+			<br/><br/>
+		</div>  <!-- 달력 + 축제 -->
+		
+		<!-- 테마 여행 섹션 -->
+		<!-- 클릭하면 테마여행 페이지로 가도록 함 -->
+		<div class="container text-center">
+			<h1 class="display-4 text-center">테마 여행</h1><br/><br/>
+			<table class="table col-md-12">
+				<tr class="col-md-12">
+					<td><img alt="" src="resources/img/tm-img-01.jpg" class="col-md-4"></td>
+					<td><img alt="" src="resources/img/tm-img-02.jpg" class="col-md-4"></td>
+					<td><img alt="" src="resources/img/tm-img-03.jpg" class="col-md-4"></td>
+				</tr>
+				<!-- <tr>
+					<td>테마1</td>
+					<td>테마2</td>
+					<td>테마3</td>
+				</tr>
+				<tr>
+					<td>테마1</td>
+					<td>테마2</td>
+					<td>테마3</td>
+				</tr> -->
+			</table>
 		</div>
 	</div>
+	
+	<!-- 푸터 부분 -->
+	<hr/>
 	<jsp:include page="footer.jsp"/>
 	
 	<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="resources/js/weather.js"></script>
+	<script type="text/javascript" src="resources/js/calendar.js"></script>
 	
 </body>
 </html>
