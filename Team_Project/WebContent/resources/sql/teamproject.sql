@@ -10,8 +10,8 @@ create table members(
 	primary key (user_id)
 );
 
-insert into members values('gumi', '0217', '�̼���', '19880101', 'lee@naver.com', '���̽� ����');
-select * from members ;
+insert into members values('gumi', '0217', '구미', '19880101', 'lee@naver.com', '구미시');
+select * from members;
 
 drop table if exists bookmark;
 create table bookmark(
