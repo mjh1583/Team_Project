@@ -62,7 +62,7 @@
 					<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요...">
 				</div>
 				<div class="">
-					<input type="button" class="btn btn-primary" value="검색">
+					<input type="button" id="keyword" class="btn btn-primary" value="검색" onclick="sendKeyword()">
 				</div>
 			</div>
 		</div>
@@ -199,6 +199,10 @@
 	<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="resources/js/weather.js"></script>
 	<script type="text/javascript" src="resources/js/calendar.js"></script>
-	
+	<script type="text/javascript">
+		function sendKeyword() {
+			location.href("map.jsp");
+		}
+	</script>
 </body>
 </html>

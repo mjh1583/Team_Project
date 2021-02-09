@@ -6,26 +6,26 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark"> <!-- 네비게이션 바를 만듦 -->
 	<div class="container">                            <!-- container라는 클래스부터 내용을 표시함. -->
 		<div class="navbar-header">						<!-- 네비게이션 헤더 -->
-			<a class="navbar-brand" href="./welcome.jsp">
-				<img src="./resources/images/logo.png" alt="Site logo">	
+			<a class="navbar-brand" href="./index.jsp">
+				<img src="./resources/img/logo.png" alt="Site logo">	
 					놀러가자(home)
 			</a>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
    		 		<ul class="navbar-nav mr-auto">
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">내정보</a>
+			        <a class="nav-link" href="myinfo.jsp">내정보</a>
 			      </li>&nbsp;&nbsp;&nbsp;
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">즐겨찾기</a>
+			        <a class="nav-link" href="bookmark.jsp">즐겨찾기</a>
 			      </li>&nbsp;&nbsp;&nbsp;
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">코스</a>
+			        <a class="nav-link" href="course.jsp">코스</a>
 			      </li>&nbsp;&nbsp;&nbsp;
 			      <li class="nav-item">
 			        <a class="nav-link" href="#">내기록</a>
 			      </li>&nbsp;&nbsp;&nbsp;
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">관광정보 수정/신규 요청</a>
+			        <a class="nav-link" href="infoRequest.jsp">관광정보 수정/신규 요청</a>
 			      </li>
 			      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
