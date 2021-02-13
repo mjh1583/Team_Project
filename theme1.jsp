@@ -20,6 +20,7 @@
 	
 	<div class="container">
 					<h1 class="display-4 text-center">월미도 불꽃 축제</h1>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
 					<div class="row" align="center">
 					<img src="./월미도불꽃.jpg" align="right" alt="남산타워" width="940" hegiht="626">
 					
@@ -42,7 +43,12 @@
 	<p>주관사 정보 : 크루즈스토리</p>
 	<p>주관사 연락처 : 1522-8905</p>
 	<p>이용요금 (이용시간) : 대인 29,000원 소인 19,000원</p>
-	
+		
+		<table>
+			<body>
+				<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+			</body>
+		</table>
 	</section>
 		<div class="text-center">
 			<footer class="tm-container-outer">

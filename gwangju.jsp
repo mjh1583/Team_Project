@@ -15,9 +15,11 @@
 <body>
 
 	<jsp:include page="menu.jsp"/>
-	
+		
+		<section>
 			<div class="container">
 					<h1 class="display-4 text-center">여행 가이드</h1>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
 					<div class="row" align="center">
 					<img src="./gwangju.jpg" align="right" alt="구전남도청" width="773" height="580">
 					<br>
@@ -27,6 +29,12 @@
 					<p>광주종합버스터미널에서 첨담09 버스를 타고 30분 정도 가면 도착한다. </p>
 				</div>
 			</div>
+			<table>
+				<body>
+					<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+				</body>
+			</table>
+		</section>
 	
 	
 		<div class="text-center">

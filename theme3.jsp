@@ -20,6 +20,7 @@
 	
 	<div class="container">
 					<h1 class="display-4 text-center">K-일러스트레이션페어 서울</h1>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
 					<div class="row" align="center">
 					<img src="./일러스트.jpg" align="right" alt="남산타워" width="940" hegiht="626">
 					
@@ -54,6 +55,11 @@
 
 	<p>이용요금 (이용시간) : 대인 29,000원 소인 19,000원</p>
 	
+		<table>
+			<body>
+				<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+			</body>
+		</table>
 	</section>
 		<div class="text-center">
 			<footer class="tm-container-outer">

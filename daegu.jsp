@@ -18,6 +18,7 @@
 	
 			<div class="container">
 					<h1 class="display-4 text-center">여행 가이드</h1>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
 					<div class="row" align="center">
 					<img src="./daegu.jpg" align="right" alt="이월드" width="500" height="413">
 					<br>
@@ -39,7 +40,12 @@
 					<h4>고스트 하우스</h4>	
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/qildby1CRc0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</br>	
-
+					
+					<table>
+						<body>
+							<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+						</body>
+					</table>
 					</section>
 				</body>
 				</div>

@@ -15,9 +15,10 @@
 <body>
 
 	<jsp:include page="menu.jsp"/>
-	
+		<section>
 			<div class="container">
 					<h1 class="display-4 text-center">여행 가이드</h1>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
 					<div class="row" align="center">
 					<img src="./gyeongju.jpg" align="right" alt="석굴암" width="580" height="800">
 					<br>
@@ -34,7 +35,12 @@
 					<p>신경주역에서는 35분 간격으로 운행하는 700번을 이용하면 된다. 10번과 11번은 같은 노선으로 순환 방향만 다를 뿐이다 </p>
 				</div>
 			</div>
-	
+			<table>
+				<body>
+					<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+				</body>
+			</table>
+		</section>
 	
 		<div class="text-center">
 			<footer class="tm-container-outer">

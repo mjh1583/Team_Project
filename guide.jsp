@@ -22,7 +22,11 @@
 					<thead>
 						
 					</thead>
+					
 					<h3>지역별 여행 가이드</h3>
+					<body>
+					<td colspan="1"><a href="즐겨찾기"  align="right" class="btn btn-primary">즐겨찾기</a></td>
+					</body>
 				<tbody>
 					<ul>
 							<td colspan="2"><a href = "seoul.jsp" class="btn btn-primary">서울</a></td>
@@ -31,21 +35,36 @@
 							<td colspan="2" ><a href = "gwangju.jsp" class="btn btn-primary">광주</a></td>
 							<td colspan="2"><a href = "gyeongju.jsp" class="btn btn-primary">경주</a></td>
 					</ul>
+					
 				</tbody>
+				
 				</table>	
 			</div>
 		</div>
-		<table border="5" align="center">
+		
+		<table border="1" align="center">
 			<td>
-				<th colspan="1"><h3>축제 가이드</h3></th>
+				<h3>축제 가이드</h3>
+				<body>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
+				</body>
 			</td>
-			<td colspan="1"><a href = "theme1.jsp" class="btn btn-primary">월미도 불꽃축제</a></td>
-			<td colspan="1"><a href = "theme2.jsp" class="btn btn-primary">광주비엔날레</a></td>
-			<td colspan="1"><a href = "theme3.jsp" class="btn btn-primary">K-일러스트레이션페어 서울</a></td>
-			<td colspan="1"><a href = "theme4.jsp" class="btn btn-primary">정조대왕 능행차 공동재현</a></td>
-			<td colspan="1"><a href = "theme5.jsp" class="btn btn-primary">부소산 봄 나들이 축제</a></td>
+		<tbody>
+			<ul>
+				<td colspan="1"><a href = "theme1.jsp" class="btn btn-primary">월미도 불꽃축제</a></td>
+				<td colspan="1"><a href = "theme2.jsp" class="btn btn-primary">광주비엔날레</a></td>
+				<td colspan="1"><a href = "theme3.jsp" class="btn btn-primary">K-일러스트레이션페어 서울</a></td>
+				<td colspan="1"><a href = "theme4.jsp" class="btn btn-primary">정조대왕 능행차 공동재현</a></td>
+				<td colspan="1"><a href = "theme5.jsp" class="btn btn-primary">부소산 봄 나들이 축제</a></td>
+			</ul>
+		</tbody>
 		</table>
 		
+		<table>
+			<body>
+				<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+			</body>
+		</table>
 
 	<div class="text-center">
 		<footer class="tm-container-outer">

@@ -20,6 +20,7 @@
 	
 	<div class="container">
 					<h1 class="display-4 text-center">부소산 봄 나들이 축제</h1>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
 					<div class="row" align="center">
 					<img src="./부소산.jpg" align="right" alt="봄나들이" width="940" hegiht="626">
 					
@@ -45,6 +46,12 @@
 	<p>주최자 정보 : 서울특별시 </p>
 
 	<p>주관사 연락처 : 031-290-3600</p>
+	
+		<table>
+			<body>
+				<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+			</body>
+		</table>
 	
 	</section>
 		<div class="text-center">

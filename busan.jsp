@@ -18,6 +18,7 @@
 	
 			<div class="container">
 					<h1 class="display-4 text-center">해운대 해수욕장</h1>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
 					<div class="row" align="center">
 					<img src="./busan.jfif" align="right" alt="해운대" width="800" height="534">
 					<section>
@@ -30,6 +31,11 @@
 					<p>인근에 위치한 역으로는 부산 도시철도 2호선 광안역, 금련산역이 있는데 이름이나 안내방송과 달리 광안역보다는 금련산역이 해변에서 조금 더 가깝다. 그러나 둘 다 해변까지 오려면 10분 정도는 걸어야 한다 </p>
 					<h3>행사</h3>
 					<p>봄에는 모래축제, 여름에는 부산바다축제, 겨울에는 북극곰수영대회</p>
+					<table>
+						<body>
+							<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+						</body>
+					</table>
 				</section>
 				
 	

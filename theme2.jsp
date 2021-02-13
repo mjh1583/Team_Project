@@ -20,8 +20,9 @@
 	
 	<div class="container">
 					<h1 class="display-4 text-center">광주비엔날레</h1>
+					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
 					<div class="row" align="center">
-					<img src="./광주비.jpg" align="right" alt="남산타워" width="940" hegiht="626">
+					<img src="./광주비.JPG" align="right" alt="남산타워" width="940" hegiht="626">
 					
 		<section>
 						<article>
@@ -44,6 +45,12 @@
 	<p>주최자 연락처 : 062-608-4114</p>
 
 	<p>이용시간 : 10~18 매주 월요일 휴관</p>
+	
+		<table>
+			<body>
+				<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+			</body>
+		</table>
 	
 	
 	</section>
