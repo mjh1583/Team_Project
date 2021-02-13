@@ -9,7 +9,7 @@
 	<meta http-equiv="Expires" content="0"/>
 	<meta http-equiv="Pragma" content="no-cache"/>
 	
-	<title>놀러가자</title>
+	<title>전남도청</title>
 	<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
@@ -19,11 +19,11 @@
 			<div class="container">
 					<h1 class="display-4 text-center">여행 가이드</h1>
 					<div class="row" align="center">
-					<img src="./gwangju.jpg" align="right" alt="구전남도청" width="100">
+					<img src="./gwangju.jpg" align="right" alt="구전남도청" width="773" height="580">
 					<br>
-					<p align="row">5·18 광주 민주화 운동의 마지막이었던 광주 재진입 작전으로 인한 최후의 전투가 벌어진곳이기도 하다.</p>
+					<h3 align="center">5·18 광주 민주화 운동의 마지막이었던 광주 재진입 작전으로 인한 최후의 전투가 벌어진곳이다.</h3>
 					
-					<h3>가는 방법</h3>
+					<h2>가는 방법</h2>
 					<p>광주종합버스터미널에서 첨담09 버스를 타고 30분 정도 가면 도착한다. </p>
 				</div>
 			</div>
