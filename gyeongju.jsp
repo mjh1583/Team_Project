@@ -18,7 +18,7 @@
 		<section>
 			<div class="container">
 					<h1 class="display-4 text-center">여행 가이드</h1>
-					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
+					<button>즐겨찾기</button>
 					<div class="row" align="center">
 					<img src="./gyeongju.jpg" align="right" alt="석굴암" width="580" height="800">
 					<br>
@@ -37,7 +37,7 @@
 			</div>
 			<table>
 				<body>
-					<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+					<button>수정요청</button>
 				</body>
 			</table>
 		</section>

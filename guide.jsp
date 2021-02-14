@@ -25,7 +25,7 @@
 					
 					<h3>지역별 여행 가이드</h3>
 					<body>
-					<td colspan="1"><a href="즐겨찾기"  align="right" class="btn btn-primary">즐겨찾기</a></td>
+					<button>즐겨찾기</button>
 					</body>
 				<tbody>
 					<ul>
@@ -46,7 +46,7 @@
 			<td>
 				<h3>축제 가이드</h3>
 				<body>
-					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
+					<button>즐겨찾기</button>
 				</body>
 			</td>
 		<tbody>
@@ -62,7 +62,7 @@
 		
 		<table>
 			<body>
-				<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+				<button>수정요청</button>
 			</body>
 		</table>
 

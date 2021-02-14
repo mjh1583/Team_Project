@@ -18,7 +18,7 @@
 	
 			<div class="container">
 					<h1 class="display-4 text-center">해운대 해수욕장</h1>
-					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
+					<button>즐겨찾기</button>
 					<div class="row" align="center">
 					<img src="./busan.jfif" align="right" alt="해운대" width="800" height="534">
 					<section>
@@ -33,7 +33,7 @@
 					<p>봄에는 모래축제, 여름에는 부산바다축제, 겨울에는 북극곰수영대회</p>
 					<table>
 						<body>
-							<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+							<button>수정요청</button>
 						</body>
 					</table>
 				</section>

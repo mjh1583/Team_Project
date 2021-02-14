@@ -18,7 +18,7 @@
 	
 			<div class="container">
 					<h1 class="display-4 text-center">남산 타워</h1>
-					<th colspan="1"><a href="즐겨찾기" class="btn btn-primary">즐겨찾기</a></th>
+					<button>즐겨찾기</button>
 					<div class="row" align="center">
 					<img src="./seoul.jpg" align="right" alt="남산타워" width="949" height="1503">
 					<br>
@@ -35,7 +35,7 @@
 			</div>
 			<table>
 			<body>
-				<td colspan="1"><a href="즐겨찾기"  align="left" class="btn btn-primary">수정요청</a></td>
+				<button>수정요청</button>
 			</body>
 		</table>
 	
