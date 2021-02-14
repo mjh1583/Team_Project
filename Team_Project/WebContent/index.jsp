@@ -140,10 +140,10 @@
 					</div>
 				</div>
 				<%
-					String[] cities = {"seoul", "daegu", "daejeon", "busan", "incheon", "ulsan", "gwangju", "jeju"};
+					String[] major_cities = {"seoul", "daegu", "daejeon", "busan", "incheon", "ulsan", "gwangju", "jeju"};
 					
-					for(int i = 0; i < cities.length; i++) {
-						String city = cities[i];
+					for(int i = 0; i < major_cities.length; i++) {
+						String city = major_cities[i];
 				%>
 					<div class="col-md-4" align="center">
 						<div class="weather-data">
@@ -188,26 +188,24 @@
 			<br/><br/>
 		</div>  <!-- 달력 + 축제 -->
 		
-		<!-- 테마 여행 섹션 -->
-		<!-- 클릭하면 테마여행 페이지로 가도록 함 -->
+		<!-- 여행 가이드 섹션 -->
+		<!-- 클릭하면 여행 가이드의 해당 페이지로 가도록 함 -->
 		<div class="container text-center">
-			<h1 class="display-4 text-center">테마 여행</h1><br/><br/>
+			<h1 class="display-4 text-center">여행 가이드</h1><br/><br/>
 			<table class="table col-md-12">
+				<%
+					String[] travel_cities = {"seoul", "gwangju", "gyeongju", "daegu", "busan"};
+					
+					for(int i = 0; i < travel_cities.length; i++) {
+						String city = travel_cities[i];
+				%>
 				<tr class="col-md-12">
-					<td><img alt="" src="resources/img/tm-img-01.jpg" class="col-md-4"></td>
-					<td><img alt="" src="resources/img/tm-img-02.jpg" class="col-md-4"></td>
-					<td><img alt="" src="resources/img/tm-img-03.jpg" class="col-md-4"></td>
+					<td><a href="./local/<%= city %>.jsp"><img style="height: 300px;" alt="" src="./local/<%= city %>.jpg" class="col-md-4"></a></td>
+					<td></td>
 				</tr>
-				<!-- <tr>
-					<td>테마1</td>
-					<td>테마2</td>
-					<td>테마3</td>
-				</tr>
-				<tr>
-					<td>테마1</td>
-					<td>테마2</td>
-					<td>테마3</td>
-				</tr> -->
+				<%
+					}
+				%>
 			</table>
 		</div>
 	</div>

@@ -22,7 +22,8 @@
 						request.setCharacterEncoding("utf-8");
 						String destination = request.getParameter("destination");
 						
-						if(destination.length() < 1 || destination.equals("")) {
+						if(destination == null) {
+							destination = "";
 					%>
 					<div class="col-md-7">
           		  		<input type="text" class="form-control" id="keyword" placeholder="놀러갈 장소를 입력하세요.">	<!-- value="이태원 맛집" -->
