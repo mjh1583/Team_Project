@@ -38,6 +38,10 @@
 			font-weight: bold;
 			color: #1207D5;
 		}
+		
+		.form-container {
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -55,21 +59,37 @@
 	<!-- 검색을 하면 지역정보로 넘어감 -->
 	<div class="jumbotron">
 		<div class="container tm-banner-bg">
-			<br/><br/><br/><br/><br/><br/><br/><br/>
+			<!-- <br/><br/><br/><br/><br/><br/><br/><br/>
 			<h1 class="display-4 text-center header">장소를 정해봅시다!</h1><br/>
 			<div class="row justify-content-md-center" align="center">
 				<div class="col-md-7">
-					<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요...">
+					<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요..." />
 				</div>
-				<div class="">
-					<input type="button" id="keyword" class="btn btn-primary" value="검색" onclick="sendKeyword()">
+				<div class="col-md-1">
+					<input type="button" id="keyword" class="btn btn-primary" value="검색" />
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	
 	<!-- 메인페이지의 주요 내용 -->
 	<!-- 1. 날씨  2. 달력 -->
+	<div class="container">
+		<h1 class="display-4 text-center">장소를 정해봅시다!</h1><br/>
+		<div class="form-container">
+			<form action="map.jsp" class="form-horizontal" method="post" onsubmit="return sendKeyword()" name="searchForm" role="form">
+				<div class="form-group row" align="center">
+					<div class="col-md-7" align="center">
+						<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요..." />
+					</div>
+					<div class="col-md-1" align="center">
+						<input type="submit" class="btn btn-primary" value="검색" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
 	<div class="container">
 		<div class="text-center">
 			<%
@@ -199,9 +219,13 @@
 	<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="resources/js/weather.js"></script>
 	<script type="text/javascript" src="resources/js/calendar.js"></script>
+	
 	<script type="text/javascript">
 		function sendKeyword() {
-			location.href("map.jsp");
+			if(!document.searchForm.destination.value) {
+				alert("목적지를 입력하세요!");
+				return false;
+			}
 		}
 	</script>
 </body>
