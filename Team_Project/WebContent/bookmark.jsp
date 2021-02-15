@@ -16,7 +16,6 @@
 		</div>
 	</div>
 	
-	
 	<div class="text-center">
 		<div class="row">
 			<div class="col-md-6">
@@ -24,8 +23,6 @@
 					<img alt="" src="./resources/img/tm-img-02.jpg" style="width: 10%">
 					<a>HI!!!	</a>
 				</div>
-				
-				
 			</div>
 		</div>
 	</div>

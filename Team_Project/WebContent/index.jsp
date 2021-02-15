@@ -15,33 +15,15 @@
 	<title>놀러가자</title>
 	
 	<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./resources/css/calendar.css?v=<%= System.currentTimeMillis() %>">
+	<link rel="stylesheet" href="./resources/css/slide.css?v=<%= System.currentTimeMillis() %>">
 	
 	<style type="text/css">
-		#calendar {
-			text-align: center;
-		}
-		
-		.container > img {
-			width: 100%;
-			top: 50%;
-			left: 50%;
-			object-fit: cover;
-		}
-		
 		.tm-banner-bg {
 		    background: url(resources/img/banner.jpg) center top no-repeat;    
 		    min-height: 360px;
 		    position: relative;
-		}
-		
-		.header {
-			font-weight: bold;
-			color: #1207D5;
-		}
-		
-		.form-container {
-			text-align: center;
-		}
+		}	
 	</style>
 </head>
 <body>
@@ -55,39 +37,27 @@
 	<!-- 메뉴 부분 : 내비게이션 바 -->
 	<jsp:include page="menu.jsp"/>	
 	
-	<!-- 화면 상단의 점보트론 -->
-	<!-- 검색을 하면 지역정보로 넘어감 -->
 	<div class="jumbotron">
 		<div class="container tm-banner-bg">
-			<!-- <br/><br/><br/><br/><br/><br/><br/><br/>
-			<h1 class="display-4 text-center header">장소를 정해봅시다!</h1><br/>
-			<div class="row justify-content-md-center" align="center">
-				<div class="col-md-7">
-					<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요..." />
-				</div>
-				<div class="col-md-1">
-					<input type="button" id="keyword" class="btn btn-primary" value="검색" />
-				</div>
-			</div> -->
+		
 		</div>
 	</div>
-	
+
 	<!-- 메인페이지의 주요 내용 -->
 	<!-- 1. 날씨  2. 달력 -->
 	<div class="container">
 		<h1 class="display-4 text-center">장소를 정해봅시다!</h1><br/>
-		<div class="form-container">
-			<form action="map.jsp" class="form-horizontal" method="post" onsubmit="return sendKeyword()" name="searchForm" role="form">
-				<div class="form-group row" align="center">
-					<div class="col-md-7" align="center">
-						<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요..." />
-					</div>
-					<div class="col-md-1" align="center">
-						<input type="submit" class="btn btn-primary" value="검색" />
-					</div>
+		<form action="map.jsp" class="form-horizontal" method="post" onsubmit="return sendKeyword()" name="searchForm" role="form">
+			<div class="form-group row
+			">
+				<div class="col-md-7">
+					<input name="destination" type="text" class="form-control" id="inputCity" placeholder="놀러갈 장소를 입력하세요..." />
 				</div>
-			</form>
-		</div>
+				<div class="col-md-1">
+					<input type="submit" class="btn btn-primary" value="검색" />
+				</div>
+			</div>
+		</form>
 	</div>
 	
 	<div class="container">
@@ -188,6 +158,51 @@
 			<br/><br/>
 		</div>  <!-- 달력 + 축제 -->
 		
+		<div class="container" align="center">
+			<div id="slider" class="col-md-10" style="width: 100%; height: 600px;">
+			    <div class="slider-item">
+			    	<img src="./resources/img/tm-img-01.jpg" class="slide-img">
+			    	<div class="">
+			    		<h4 class="display-5 text-center">월미도 불꽃 축제</h4>
+	    				<p>행사 시작일 : 2021년 02월 01일</p>
+						<p>행사 종료일 : 2021년 12월 31일</p>
+			    	</div>
+			    </div>
+			    <div class="slider-item">
+			    	<img src="./resources/img/tm-img-02.jpg">
+			    	<div>
+			    		<h4 class="display-5 text-center">광주비엔날레</h4>
+	    				<p>행사 시작일 : 2021년 04월 01일</p>
+						<p>행사 종료일 : 2021년 05월 09일</p>
+			    	</div>
+			    </div>
+			    <div class="slider-item">
+			    	<img src="./resources/img/tm-img-03.jpg">
+			    	<div>
+			    		<h4 class="display-5 text-center">K-일러스트레이션페어 서울</h4>
+	    				<p>행사 시작일 : 2021년 04월 08일</p>
+						<p>행사 종료일 : 2021년 04월 11일</p>
+			    	</div>
+			    </div>
+			    <div class="slider-item">
+			    	<img src="./resources/img/tm-img-04.jpg">
+					<div>
+						<h4 class="display-5 text-center">정조대왕 능행차 공동재현</h4>
+	    				<p>행사 시작일 : 2021년 04월 24일</p>
+						<p>행사 종료일 : 2021년 04월 25일</p>
+					</div>
+			    </div>
+			    <div class="slider-item">
+			    	<img src="./resources/img/tm-img-05.jpg">
+			    	<div>	
+			    		<h4 class="display-5 text-center">부소산 봄 나들이 축제</h4>
+   						<p> 행사 시작일 : 2021년 04월 24일</p>
+						<p>행사 종료일 : 2021년 04월 25일</p>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+		
 		<!-- 여행 가이드 섹션 -->
 		<!-- 클릭하면 여행 가이드의 해당 페이지로 가도록 함 -->
 		<div class="container text-center">
@@ -208,6 +223,7 @@
 				%>
 			</table>
 		</div>
+		
 	</div>
 	
 	<!-- 푸터 부분 -->
@@ -215,8 +231,9 @@
 	<jsp:include page="footer.jsp"/>
 	
 	<script type="text/javascript" src="resources/js/jquery-3.5.1.min.js"></script>
-	<script type="text/javascript" src="resources/js/weather.js"></script>
-	<script type="text/javascript" src="resources/js/calendar.js"></script>
+	<script type="text/javascript" src="resources/js/weather.js?v=<%= System.currentTimeMillis() %>"></script>
+	<script type="text/javascript" src="resources/js/calendar.js?v=<%= System.currentTimeMillis() %>"></script>
+	<script type="text/javascript" src="resources/js/slide.js?v=<%= System.currentTimeMillis() %>"></script>
 	
 	<script type="text/javascript">
 		function sendKeyword() {

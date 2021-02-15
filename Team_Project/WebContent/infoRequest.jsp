@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
-	<jsp:include page="menu_header.jsp"/>
+	<jsp:include page="./menu_header.jsp"/>
 
 	<div class="jumbotron">
 		<div class="container">

@@ -19,17 +19,17 @@
 	<jsp:include page="../menu.jsp"/>
 	
 	<div class="container">
-					<h1 class="display-4 text-center">K-일러스트레이션페어 서울</h1>
-					<button>즐겨찾기</button>
-					<div class="row" align="center">
-					<img src="../local/일러스트.jpg" align="right" alt="남산타워" width="940" hegiht="626">
+		<h1 class="display-4 text-center">K-일러스트레이션페어 서울</h1>
+		<button>즐겨찾기</button>
+		<div class="row" align="center">
+			<img src="../local/일러스트.jpg" align="right" alt="남산타워" width="940" hegiht="626">
 					
 		<section>
-						<article>
-						<h3>1987년부터 축적된 ㈜한국국제전시의 풍부한 네트워크와 전시 노하우를 바탕으로 개최되는 ‘K-일러스트레이션페어’는 숨어있는 유망 아티스트들을 발굴하여 작품을 대중에게 소개하고,</h3> 
-						<h3>전문가 및 유명 작가들과의 소통의 장을 마련한다.</h3>
-						<h3>다양한 매체와 네트워크 서비스를 통해 일러스트레이터를 적극 홍보하고, 일러스트레이션 산업의 미래 발전을 도모하기 위한 교류의 장을 선사한다.</h3>
-						</article>
+			<article>
+			<h3>1987년부터 축적된 ㈜한국국제전시의 풍부한 네트워크와 전시 노하우를 바탕으로 개최되는 ‘K-일러스트레이션페어’는 숨어있는 유망 아티스트들을 발굴하여 작품을 대중에게 소개하고,</h3> 
+			<h3>전문가 및 유명 작가들과의 소통의 장을 마련한다.</h3>
+			<h3>다양한 매체와 네트워크 서비스를 통해 일러스트레이터를 적극 홍보하고, 일러스트레이션 산업의 미래 발전을 도모하기 위한 교류의 장을 선사한다.</h3>
+		</article>
 			
 	
 	<p1>행사 시작일 : 2021년 04월 08일</p1>

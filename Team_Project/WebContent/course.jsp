@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
-	<jsp:include page="menu_header.jsp"/>
+	<jsp:include page="./menu_header.jsp"/>
 
 	<div class="jumbotron">
 		<div class="container">
@@ -24,25 +24,18 @@
 				</tr>
 			</table>
 		</div>
-		
 		<div style="padding-top: 50px">
-			
 			<table class="table table-hover">
 				<tr>
 					<th>총 n건</th>
 					<a href=""></a> <!--  -->
 				</tr>
-				
-				
-				
 			</table>
-			
 		</div>
 		<hr>
 	</div>
 	
 	<jsp:include page="footer.jsp"/>
 	
-
 </body>
 </html>
